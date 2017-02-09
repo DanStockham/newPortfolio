@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+body {
+  font-family: "Anton", arial, sans-serif;
+  font-size: 1rem;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  height: 100%;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.app-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.app-content {
+  width: 100%;
+  text-align: left;
+  line-height: 1.3;
+  margin-top: 100px;
+  .app-content__projects {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .app-content__projects-header {
+    width: 30%;
+  }
+  .app-content__projects-tagline {
+    width: 50%;
+  }
+  .app-content__projects-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .app-content__projects-cards__card {
+      margin: 0px 10px 10px 0px;
+    }
+  }
+}
+
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  width: 40%;
+  .app-sidebar__card {
+    align-self: center;
+    width: 200px;
+    height: 100px;
+    margin: 30px;
+    background: black;
+    color: white;
+  }
+}
+
+.app-nav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  height: 50px;
+  color: #000;
+  font-size: 1.2em;
+  .app-nav__logo-name {
+    // align-self: center;
+    font-weight: bold;
+  }
+  .app-nav__links {
+    display: flex;
+    flex-direction: row;
+    li {
+      list-style: none;
+      margin-left: 10px;
+    }
+    li:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@media (max-width: 1200px) {
+  .app-sidebar {
+    display: none;
+  }
+  .app-content__projects-cards__card:nth-child(3n) {
+    margin-right: 0;
+  }
+
+}
