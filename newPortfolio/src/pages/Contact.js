@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 
 class Contact extends Component {
-    constructor(props){
-        super(props)
-    }
-
     render(){
         return (
             <div>
-                <h1>Contact</h1>
+              <div className="app-content">
+                <div className="app-content__projects">
+                  <h1 className="app-content__header">Contact</h1>
+                  <p className="app-content__tagline">To contact us please use the contact form visible. When sending files, please use the following e-mail</p>
+              </div>
             </div>
+          </div>
         )
     }
 }

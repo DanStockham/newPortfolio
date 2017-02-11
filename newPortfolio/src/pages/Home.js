@@ -8,8 +8,8 @@ class Home extends Component {
             <div className="app-page">
               <div className="app-content">
                 <div className="app-content__projects">
-                  <h1 className="app-content__projects-header">My Creative and Modern Projects</h1>
-                  <p className="app-content__projects-tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sapien ante, cursus non imperdiet eget.</p>
+                  <h1 className="app-content__header">My Creative and Modern Projects</h1>
+                  <p className="app-content__tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sapien ante, cursus non imperdiet eget.</p>
                   <FeaturedProjects />
                 </div>
               </div>
