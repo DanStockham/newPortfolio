@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Anton');
-body {
-  font-family: "Anton", arial, sans-serif;
-  font-size: 1rem;
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
-ul {
-  padding-left: 0;
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+};
+
+@mixin page-margin() {
+  margin-left: 12%;
 }
 
 .app {
+  @include page-margin();
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   height: 100%;
-  width: 980px;
-  margin: 0 auto;
+
 }
 
 .app-page {
@@ -53,7 +54,8 @@ ul {
   display: flex;
   flex-direction: column;
   background: #f0f0f0;
-  width: 40%;
+  width: 60%;
+  height:100%;
   .app-sidebar__card {
     align-self: center;
     width: 200px;
@@ -88,8 +90,24 @@ ul {
   }
 }
 
-.App-intro {
-  font-size: large;
+.app-footer {
+  @include flex-row();
+  align-items: baseline;
+  background: #f1f1f1;
+  color: #686868;
+  margin-top: 75px;
+  .app-footer__social-media {
+    @include page-margin();
+    @include flex-row();
+    align-self: center;
+    font-size: 1.6em;
+    .social-media__link {
+      margin-right: 20px;
+    }
+    .social-media__link:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
