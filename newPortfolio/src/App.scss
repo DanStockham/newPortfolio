@@ -10,7 +10,7 @@
 }
 
 .app {
-  @include page-margin();
+  // @include page-margin();
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -19,6 +19,7 @@
 }
 
 .app-page {
+  @include page-margin();
   display: flex;
   flex-direction: row;
 }
@@ -67,6 +68,7 @@
 }
 
 .app-nav {
+  @include page-margin();
   display: flex;
   flex-direction: row;
   position: fixed;
