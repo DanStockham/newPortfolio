@@ -63,7 +63,7 @@
     width: 200px;
     height: 100px;
     margin: 30px;
-    background: black;
+    background: black;@extend .app-content__tagline;
     color: white;
   }
 }
@@ -112,6 +112,35 @@
       margin-right: 0;
     }
   }
+}
+
+.app-contact {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 11.8%;
+  margin-top: 100px;
+  .app-contact__header {
+    @extend .app-content__header;
+  }
+  .app-contact__tagline {
+    width: 60%;
+  }
+  .app-contact__form {
+    // @include flex-row();
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap-reverse;
+    }
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.row {
+  @include flex-row();
 }
 
 @media (max-width: 1200px) {
