@@ -8,22 +8,29 @@ class Contact extends Component {
                   <h1 className="app-contact__header">Contact</h1>
                   <p className="app-contact__tagline">To contact us please use the contact form visible. When sending files, please use the following e-mail</p>
                   <form className="app-contact__form">
-                    <ul className="row">
-                      <li>
-                        <label for="username">Username:</label>
+                    <div className="form__input">
+                      <p>
+                        <label htmlFor="username">Username:</label>
                         <input name="username"></input>
-                      </li>
-                      <li>
-                        <label for="email">Email:</label>
+                      </p>
+                    </div>
+                    <div className="form__input">
+                      <p>
+                        <label htmlFor="email">Email:</label>
                         <input name="email"></input>
-                      </li>
-                      <li>
-                        <label for="message">Message: </label>
-                        <input name="message"></input>
-                      </li>
-                    </ul>
-                    <button type="submit">Submit</button>
+                      </p>
+                    </div>
+                    <div className="form__input">
+                      <p>
+                        <label htmlFor="message">Message: </label>
+                        <textarea rows="10" cols="5" name="message"></textarea>
+                      </p>
+                    </div>
+                    <div className="app-contact__form__submit">
+                      <button className="form__btn" type="submit">Submit</button>
+                    </div>
                   </form>
+
               </div>
           </div>
         )

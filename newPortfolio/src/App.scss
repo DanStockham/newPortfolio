@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-@import 'Contact.scss';
 
 @mixin flex-row() {
   display: flex;
   flex-direction: row;
 };
 
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+};
+
 @mixin page-margin() {
   margin-left: 12%;
 }
+
+$light-grey: #f8f7f7;
 
 .app {
   // @include page-margin();
@@ -16,7 +22,6 @@
   flex-direction: column;
   text-align: center;
   height: 100%;
-
 }
 
 .app-page {
@@ -45,7 +50,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-start;;
     .app-content__projects-cards__card {
       margin: 0px 10px 10px 0px;
     }
@@ -77,7 +82,7 @@
   color: #000;
   font-size: 1.2em;
   .app-nav__logo-name {
-    // align-self: center;
+    font-size: 23px;
     font-weight: bold;
   }
   .app-nav__links {
@@ -96,7 +101,7 @@
 .app-footer {
   @include flex-row();
   align-items: baseline;
-  background: #f1f1f1;
+  background: $light-grey;
   color: #686868;
   margin-top: 75px;
   height: 100%;
@@ -104,9 +109,12 @@
     @include page-margin();
     @include flex-row();
     align-self: center;
-    font-size: 1.6em;
+    font-size: 1.2em;
+
     .social-media__link {
       margin-right: 20px;
+      padding: 20px;
+      border-bottom: solid 1px grey;
     }
     .social-media__link:last-child {
       margin-right: 0;
@@ -118,7 +126,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 0 11.8%;
+  margin: 0 0 0 11.9%;
   margin-top: 100px;
   .app-contact__header {
     @extend .app-content__header;
@@ -127,21 +135,55 @@
     width: 60%;
   }
   .app-contact__form {
-    // @include flex-row();
-    ul {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap-reverse;
+    @include flex-column();
+    flex-wrap: wrap;
+    width: 100%;
+    .form__input {
+      margin-right: 50px;
     }
-    input {
-      width: 100%;
+    .app-contact__form__submit {
+      @include flex-row();
+      justify-content: flex-end;
+      width: 97.3%;
+
+    }
+    .form__btn {
+      width: 220px;
+      height: 40px;
+      font-weight: 900;
     }
   }
 }
 
-.row {
-  @include flex-row();
+.app-content__about {
+  @extend .app-content__projects;
+  margin: 0 12% 0 0;
 }
+
+.app-content__profile {
+  @include flex-row();
+
+  .profile__summary {
+    @extend .app-content__profile;
+    p {
+      margin-right: 20%;
+    }
+  }
+
+}
+
+.project-card {
+  border: #DFDEDE solid 2px;
+  padding: 10px;
+  margin: 0 15px 15px 0;
+  font-size: 14px;
+  .project-card--img {
+    width: 250px;
+    height: 120px;
+
+  }
+}
+
 
 @media (max-width: 1200px) {
   .app-sidebar {
@@ -151,4 +193,19 @@
     margin-right: 0;
   }
 
+}
+
+@media (max-width: 600px) {
+  .form__btn {
+    margin-right: 5px;
+  }
+  .app-content__profile {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .form__btn {
+    margin-right: 8px;
+  }
 }

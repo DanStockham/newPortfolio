@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FeaturedProjects from '../FeaturedProjects.js';
+import FeaturedProjects from '../components/FeaturedProjects.js';
+import AllProjects from '../components/AllProjects.js';
 
 class Home extends Component {
     render(){
