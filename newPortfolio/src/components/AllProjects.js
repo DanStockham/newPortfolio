@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ProjectCard from './ProjectCard.js';
+import projects from '../projectDetails.js';
 
 class FeaturedProjects extends Component {
     constructor(props){
@@ -10,23 +12,21 @@ class FeaturedProjects extends Component {
     }
 
     projects() {
-      let projects = [];
-      for(let i = 0; i < 6; i++) {
-        projects.push((
-          <div className="app-content__projects-cards__card">
-            <img key={i} alt="placeholder" src=" http://placehold.it/300x150"></img>
-          </div>
+      let projectsList = [];
+      for(let i = 0; i < projects.length; i++) {
+        projectsList.push((
+          <ProjectCard key={i} title={projects[i].title} imgSrc={projects[i].imageSrc} description={projects[i].description} />
         ))
       }
 
-      return projects
+      return projectsList;
     }
 
     render(){
-      let projects = this.projects()
+      let projectsList = this.projects()
         return (
             <div className="app-content__projects-cards">
-              {projects}
+              {projectsList}
             </div>
         )
     }

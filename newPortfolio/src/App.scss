@@ -50,7 +50,8 @@ $light-grey: #f8f7f7;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;;
+    justify-content: space-between;
+    margin-right:13%;
     .app-content__projects-cards__card {
       margin: 0px 10px 10px 0px;
     }
@@ -68,7 +69,7 @@ $light-grey: #f8f7f7;
     width: 200px;
     height: 100px;
     margin: 30px;
-    background: black;@extend .app-content__tagline;
+    background: black;
     color: white;
   }
 }
@@ -173,15 +174,47 @@ $light-grey: #f8f7f7;
 }
 
 .project-card {
-  border: #DFDEDE solid 2px;
-  padding: 10px;
-  margin: 0 15px 15px 0;
+  margin-bottom: 20px;
   font-size: 14px;
-  .project-card--img {
-    width: 250px;
-    height: 120px;
-
+  height: 200px;
+  width: 300px;
+  .project-card__inner-contents {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: 1.5s;
   }
+  .front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    -webkit-backface-visibility: hidden;
+    backface-visibilty: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .back {
+    border: #DFDEDE solid 2px;
+    height: 85%;
+    width: 88%;
+    position: absolute;
+     -webkit-backface-visibility: hidden;
+    backface-visibilty: hidden;
+    transform: rotateY(-180deg);
+    padding: 15px;
+  }
+}
+
+.app-content__projects--resize {
+  width: 20%;
+}
+.project-card:hover .project-card__inner-contents {
+  transform: rotateY(-180deg);
 }
 
 
@@ -189,7 +222,13 @@ $light-grey: #f8f7f7;
   .app-sidebar {
     display: none;
   }
-  .app-content__projects-cards__card:nth-child(3n) {
+  .project-card__inner-contents {
+    transition: 0.5s;
+  }
+  .app-content__projects-cards {
+    width: 70%;
+  }
+  .app-content__projects-cards__card {
     margin-right: 0;
   }
 
@@ -205,6 +244,9 @@ $light-grey: #f8f7f7;
 }
 
 @media (max-width: 500px) {
+  .app-content__projects-cards {
+    width: 100%;
+  }
   .form__btn {
     margin-right: 8px;
   }

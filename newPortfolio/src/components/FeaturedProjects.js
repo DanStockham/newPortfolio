@@ -13,7 +13,7 @@ class FeaturedProjects extends Component {
 
     projects() {
       let projectsList = [];
-      for(let i = 0; i < projects.length; i++) {
+      for(let i = 0; i < 6; i++) {
         projectsList.push((
           <ProjectCard key={i} title={projects[i].title} imgSrc={projects[i].imageSrc} description={projects[i].description} />
         ))

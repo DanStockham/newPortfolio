@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AllProjects from '../components/AllProjects.js'
 
 class Projects extends Component {
     constructor(props){
@@ -9,8 +10,9 @@ class Projects extends Component {
         return (
         <div>
           <div className="app-content">
-            <div className="app-content__projects">
+            <div className="app-content__projects" style={{ width: "85%"}}>
               <h1 className="app-content__header">Projects</h1>
+              <AllProjects />
             </div>
           </div>
         </div>
