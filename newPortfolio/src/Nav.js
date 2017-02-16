@@ -6,36 +6,13 @@ export class Nav extends Component {
   constructor() {
     super();
     this.state = {
-      scrollPos: 0
+      placeholder: null
     }
-    this.setScrollPosition = this.setScrollPosition.bind(this);
-  }
-  componentWillMount() {
-
-    var ticking = false;
-
-    window.addEventListener("scroll", findScrollPosition, false);
-
-    function findScrollPosition(e) {
-      let prevScrollPos = window.scrollY;
-      if (!ticking) {
-        this.setScrollPosition(prevScrollPos)
-        window.requestAnimationFrame(function() {
-          ticking = false;
-        });
-      }
-      ticking = true;
-      }
-
-  }
-
-  setScrollPosition(position) {
-    this.setState({ scrollPos: position });
   }
 
   render() {
     return (
-    <div className="app-nav">
+    <div className="app-nav" style={this.props.passedStyles}>
       <ul className="app-nav__links">
         <li><div className="app-nav__logo-name">DanStockham</div></li>
         <li><Link to='/' >Home</Link></li>

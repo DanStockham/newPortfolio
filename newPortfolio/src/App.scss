@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
 
 @mixin flex-row() {
   display: flex;
@@ -80,8 +80,12 @@ $light-grey: #f8f7f7;
   flex-direction: row;
   position: fixed;
   height: 50px;
+  width: 100%;
+  z-index: 3;
   color: #000;
   font-size: 1.2em;
+  background: rgba(255,255,255, 0);
+  transition: 1s;
   .app-nav__logo-name {
     font-size: 23px;
     font-weight: bold;
