@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 import './App.scss';
 
 export class Nav extends Component {
@@ -13,12 +13,12 @@ export class Nav extends Component {
   render() {
     return (
     <div className="app-nav" style={this.props.passedStyles}>
+      <div className="app-nav__logo-name">DanStockham</div>
       <ul className="app-nav__links">
-        <li><div className="app-nav__logo-name">DanStockham</div></li>
-        <li><Link to='/' >Home</Link></li>
-        <li><Link to='/projects' >Projects</Link></li>
-        <li><Link to='/about-me' >About Me</Link></li>
-        <li><Link to='/contact' >Contact</Link></li>
+        <li><IndexLink activeClassName='active' to='/' >Home</IndexLink></li>
+        <li><Link activeClassName='active' to='/projects' >Projects</Link></li>
+        <li><Link activeClassName='active' to='/about-me' >About Me</Link></li>
+        <li><Link activeClassName='active' to='/contact' >Contact</Link></li>
       </ul>
     </div>
     );

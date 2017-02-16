@@ -8,7 +8,7 @@ class Projects extends Component {
 
     render(){
         return (
-        <div>
+        <div className="app-page--projects">
           <div className="app-content">
             <div className="app-content__projects" style={{ width: "85%"}}>
               <h1 className="app-content__header">Projects</h1>

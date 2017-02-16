@@ -46,17 +46,16 @@ export default class Wrapper extends Component {
 
     render() {
       const styles = this.checkScrollState();
-      console.log(styles);
       return (
         <div className="app">
           <Nav passedStyles={styles}/>
           {this.props.children}
           <footer className="app-footer">
             <ul className="app-footer__social-media">
-              <li className="social-media__link"><i className="fa fa-github-square" aria-hidden="true"></i></li>
-              <li className="social-media__link"><i className="fa fa-linkedin-square" aria-hidden="true"></i></li>
-              <li className="social-media__link"><i className="fa fa-twitter-square" aria-hidden="true"></i></li>
-              <li className="social-media__link"><i className="fa fa-free-code-camp" aria-hidden="true"></i></li>
+              <a className="social-media__link" href="https://github.com/danstockham" target="_blank"><li ><i className="fa fa-github-square" aria-hidden="true"></i></li></a>
+              <a className="social-media__link"href="https://www.linkedin.com/in/danstockham/" target="_blank"><li ><i className="fa fa-linkedin-square" aria-hidden="true"></i></li></a>
+              <a className="social-media__link"href="https://twitter.com/CodeMeAwesome" target="_blank"><li ><i className="fa fa-twitter-square" aria-hidden="true"></i></li></a>
+              <a className="social-media__link" href="https://www.freecodecamp.com/danstockham" target="_blank"><li ><i className="fa fa-free-code-camp" aria-hidden="true"></i></li></a>
             </ul>
           </footer>
         </div>
