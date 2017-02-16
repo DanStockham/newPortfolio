@@ -6,7 +6,7 @@ class Contact extends Component {
           <div className="app-page">
               <div className="app-contact">
                   <h1 className="app-contact__header">Contact</h1>
-                  <p className="app-contact__tagline">To contact us please use the contact form visible. When sending files, please use the following e-mail</p>
+                  <p className="app-contact__tagline">To contact me, please use the contact form visible. </p>
                   <form className="app-contact__form">
                     <div className="form__input">
                       <p>
