@@ -10,10 +10,10 @@ class ProjectCard extends Component {
               <div className="front">
                 <img alt="placeholder" src={imgSrc} />
               </div>
-              <div className="back">
+              <a href="#"><div className="back">
                 <h4>{this.props.title}</h4>
                 <p>{this.props.description}</p>
-              </div>
+              </div></a>
             </div>
           </div>
         )

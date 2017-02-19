@@ -16,9 +16,9 @@ export class Nav extends Component {
       <div className="app-nav__logo-name">DanStockham</div>
       <ul className="app-nav__links">
         <li><IndexLink activeClassName='active' to='/' >Home</IndexLink></li>
-        <li><Link activeClassName='active' to='/projects' >Projects</Link></li>
-        <li><Link activeClassName='active' to='/about-me' >About Me</Link></li>
-        <li><Link activeClassName='active' to='/contact' >Contact</Link></li>
+        <li><IndexLink activeClassName='active' to='/projects' >Projects</IndexLink></li>
+        <li><IndexLink activeClassName='active' to='/about-me' >About Me</IndexLink></li>
+        <li><IndexLink activeClassName='active' to='/contact' >Contact</IndexLink></li>
       </ul>
     </div>
     );

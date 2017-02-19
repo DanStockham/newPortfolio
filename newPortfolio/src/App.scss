@@ -11,7 +11,7 @@
 };
 
 @mixin page-margin($off-set) {
-  margin-left: 11.5% - $off-set;
+  margin-left: 12% - $off-set;
 }
 
 $light-grey: #f8f7f7;
@@ -156,19 +156,21 @@ $light-grey: #f8f7f7;
     @include flex-column();
     flex-wrap: wrap;
     width: 100%;
+
     .form__input {
       margin-right: 50px;
     }
     .app-contact__form__submit {
       @include flex-row();
       justify-content: flex-end;
-      width: 97.3%;
+      width: 98%;
 
     }
     .form__btn {
       width: 220px;
       height: 40px;
       font-weight: 900;
+
     }
   }
 }
@@ -206,7 +208,7 @@ $light-grey: #f8f7f7;
     position: relative;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
-    transition: 1.5s;
+    transition: 2s;
   }
   .front {
     height: 100%;
@@ -237,12 +239,14 @@ $light-grey: #f8f7f7;
 }
 .project-card:hover .project-card__inner-contents {
   transform: rotateY(-180deg);
+  transition: 1s;
 }
 
 
-@media (max-width: 1200px) {
-  .app-sidebar {
-    display: none;
+@media (min-width: 1200px) {
+  .app-content__projects {
+    width: 80%;
+    margin-bottom: 200px;
   }
   .project-card__inner-contents {
     transition: 0.5s;
@@ -272,15 +276,14 @@ $light-grey: #f8f7f7;
         font-size: 1em;
       }
     }
-    .app-nav__links li:nth-child(1) {
-      display: none;
-    }
+    // .app-nav__links li:nth-child(1) {
+    //   display: none;
+    // }
   }
   .app-contact__form {
     width: 60%;
     .app-contact__form__submit {
       width: 100%;
-      justify-content: center;
     }
     .form__btn {
       font-size: 0.6em;

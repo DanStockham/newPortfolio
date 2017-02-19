@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Route, IndexRoute, hashHistory, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute,browserHistory } from 'react-router';
 import Wrapper from './Wrapper.js';
 import Home from './pages/Home.js';
 import Projects from './pages/Projects.js';
