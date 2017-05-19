@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import images from '../assets';
 
 class ProjectCard extends Component {
 
     render(){
-      const imgSrc = require('../'+ this.props.imgSrc);
+      const imgSrc = '../' + this.props.imgSrc;
         return (
           <div className="project-card">
             <div className="project-card__inner-contents">
