@@ -6,11 +6,7 @@ class Contact extends Component {
           <div className="app-page">
               <div className="app-contact">
                   <h1 className="app-contact__header">Contact</h1>
-                  <p className="app-contact__tagline">To contact me, please use the contact form visible. If you prefer using social media and like to get know me more, you can reach out through here: </p>
-                  <ul>
-                    <li><a href="">Linkedin</a></li>
-                    <li><a href="">Twitter</a></li>
-                  </ul>
+                  <p className="app-contact__tagline">To contact me, please use the contact form visible. You can also reach out to me through social media. The links are provided on the footer of the site. </p>
                   <form className="app-contact__form">
                     <div className="form__input">
                       <p>
