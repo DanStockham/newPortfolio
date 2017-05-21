@@ -23,7 +23,7 @@ class Contact extends Component {
                     <div className="form__input">
                       <p>
                         <label htmlFor="message">Message: </label>
-                        <textarea rows="10" cols="5" name="message"></textarea>
+                        <textarea style={{"background:" : "#DFDEDE"}} rows="10" cols="5" name="message"></textarea>
                       </p>
                     </div>
                     <div className="app-contact__form__submit">

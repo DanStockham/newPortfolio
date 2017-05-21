@@ -48,10 +48,14 @@ label {
 input {
   width: 100%;
   border: none;
-  background: #f8f7f7;
+  background: #DFDEDE;
   padding: 15px;
 }
 
 textarea {
   @extend input;
+}
+
+textarea:focused {
+  height: 100%;
 }

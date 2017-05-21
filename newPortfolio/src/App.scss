@@ -38,7 +38,6 @@ $light-grey: #f8f7f7;
   .app-content__projects {
     display: flex;
     flex-direction: column;
-
   }
   .app-content__header {
     width: 30%;
@@ -50,9 +49,9 @@ $light-grey: #f8f7f7;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-right:13%;
-    .app-content__projects-cards__card {
+    .app-content__projects-cards__car {
       margin: 0px 10px 10px 0px;
     }
   }
@@ -155,7 +154,7 @@ $light-grey: #f8f7f7;
   .app-contact__form {
     @include flex-column();
     flex-wrap: wrap;
-    width: 100%;
+    width: 60%;
 
     .form__input {
       margin-right: 50px;
@@ -198,7 +197,7 @@ $light-grey: #f8f7f7;
 }
 
 .project-card {
-  margin-bottom: 20px;
+  margin: 20px 20px 20px 0;
   font-size: 14px;
   height: 200px;
   width: 300px;
@@ -280,18 +279,21 @@ $light-grey: #f8f7f7;
     //   display: none;
     // }
   }
-  .app-contact__form {
-    width: 60%;
-    .app-contact__form__submit {
-      width: 100%;
+  .app-contact {
+    .app-contact__form {
+      margin-right: 0;
+      width: 80vw;
+      .app-contact__form__submit {
+        width: 100%;
+      }
+      .form__btn {
+        font-size: 0.6em;
+        padding: 10px;
+      }
+      }
+    .app-content__profile {
+      flex-direction: column;
     }
-    .form__btn {
-      font-size: 0.6em;
-      padding: 10px;
-    }
-    }
-  .app-content__profile {
-    flex-direction: column;
   }
 }
 

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import images from '../assets';
 
 class ProjectCard extends Component {
 
     render(){
-      const imgSrc = '../' + this.props.imgSrc;
+      const imgSrc = 'http://placehold.it/350x150';
         return (
           <div className="project-card">
             <div className="project-card__inner-contents">
