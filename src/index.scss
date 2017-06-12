@@ -1,0 +1,68 @@
+$dark-grey: #a59e9b;
+$light-grey: #f8f7f7;
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  *,*:before, *:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", arial, sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  background: $light-grey;
+
+}
+
+p {
+  color: $dark-grey;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: $dark-grey;
+  &:hover {
+    color: black;
+  }
+  &:visited {
+    color: currentColor;
+  }
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  font-size: 13px;
+}
+
+label {
+  padding-bottom: 100px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  background: #DFDEDE;
+  padding: 15px;
+}
+
+textarea {
+  @extend input;
+  box-sizing: inherit;
+}
+
+textarea:focused {
+  height: 100%;
+}

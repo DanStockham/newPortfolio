@@ -1,0 +1,49 @@
+html {
+  height: 100%;
+  box-sizing: border-box; }
+  html *, html *:before, html *:after {
+    box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", arial, sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  background: #f8f7f7; }
+
+p {
+  color: #a59e9b; }
+
+ul {
+  padding-left: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  color: #a59e9b; }
+  a:hover {
+    color: black; }
+  a:visited {
+    color: currentColor; }
+
+button {
+  font-family: inherit;
+  border: none;
+  font-size: 13px; }
+
+label {
+  padding-bottom: 100px; }
+
+input, textarea {
+  width: 100%;
+  border: none;
+  background: #DFDEDE;
+  padding: 15px; }
+
+textarea {
+  box-sizing: inherit; }
+
+textarea:focused {
+  height: 100%; }
