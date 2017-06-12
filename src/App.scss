@@ -117,17 +117,23 @@ $light-grey: #f8f7f7;
 }
 
 .app-footer {
-  @include flex-row();
-  align-items: baseline;
   background: $light-grey;
   color: #686868;
   height: 100%;
+  .app-footer__resume {
+    @include page-margin(0);
+    @include flex-row();
+    font-size: 1.2em;
+    span {
+      padding-left: 10px;
+      padding-bottom: 10px;
+    }
+  }
   .app-footer__social-media {
     @include page-margin(0);
     @include flex-row();
     align-self: center;
     font-size: 1.2em;
-
     .social-media__link {
       margin-right: 20px;
       padding: 20px;

@@ -83,12 +83,17 @@
       margin-left: 0; }
 
 .app-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
   background: #f8f7f7;
   color: #686868;
   height: 100%; }
+  .app-footer .app-footer__resume {
+    margin-left: 12%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2em; }
+    .app-footer .app-footer__resume span {
+      padding-left: 10px;
+      padding-bottom: 10px; }
   .app-footer .app-footer__social-media {
     margin-left: 12%;
     display: flex;
