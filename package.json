@@ -60,6 +60,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "dependencies": {
+    "contentful": "^4.4.3",
     "express": "^4.15.3",
     "morgan": "^1.8.2",
     "npm-run-all": "^4.0.2",

@@ -14,8 +14,8 @@ class App extends Component {
       <Router history={browserHistory}>
         <Route path='/' component={Wrapper}>
           <IndexRoute component={Home} />
-          <Route path='projects' component={Projects} />
           <Route path='about-me' component={AboutMe} />
+          <Route path='projects' component={Projects} />
           <Route path='contact' component={Contact} />
           <Route path='*' component={NotFound} />
         </Route>

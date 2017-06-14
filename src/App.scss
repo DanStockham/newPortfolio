@@ -124,9 +124,12 @@ $light-grey: #f8f7f7;
     @include page-margin(0);
     @include flex-row();
     font-size: 1.2em;
+    a {
+      text-decoration: none;
+    }
     span {
       padding-left: 10px;
-      padding-bottom: 10px;
+      padding-bottom: 20px;
     }
   }
   .app-footer__social-media {

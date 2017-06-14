@@ -1,36 +1,39 @@
 import React, { Component } from 'react';
 import ProjectCard from './ProjectCard.js';
-import projects from '../projectDetails.js';
 
-class FeaturedProjects extends Component {
+class AllProjects extends Component {
     constructor(props){
         super(props)
-        this.state = {
-          placeholder: null
-        }
         this.projects = this.projects.bind(this);
     }
 
     projects() {
-      let projectsList = [];
-      for(let i = 0; i < projects.length; i++) {
-        projectsList.push((
-          <ProjectCard key={i} title={projects[i].title} imgSrc={projects[i].imageSrc} description={projects[i].description} />
-        ))
+      let projects = this.props.projects;
+      let projectList = [];
+      if(projects !== null) {
+        for(let i = 0; i < projects.length; i++) {
+            projectList.push((
+              <ProjectCard key={i}
+                title={projects[i].title}
+                imgUrl={projects[i].imageUrl}
+                description={projects[i].description}
+                link = {projects[i].link}/>
+            ))
+        }
       }
 
-      return projectsList;
+      return projectList;
     }
 
     render(){
-      let projectsList = this.projects()
+      let projects = this.projects();
         return (
             <div className="app-content__projects-cards">
-              {projectsList}
+              {projects}
             </div>
         )
     }
 }
 
 
-export default FeaturedProjects
+export default AllProjects
