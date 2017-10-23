@@ -225,6 +225,7 @@ $light-grey: #f8f7f7;
     z-index: 2;
     -webkit-backface-visibility: hidden;
     backface-visibilty: hidden;
+    transform-style: preserve-3d;
     img {
       height: 100%;
       width: 100%;

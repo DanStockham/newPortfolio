@@ -167,7 +167,8 @@
     position: absolute;
     z-index: 2;
     -webkit-backface-visibility: hidden;
-    backface-visibilty: hidden; }
+    backface-visibilty: hidden;
+    transform-style: preserve-3d; }
     .project-card .front img {
       height: 100%;
       width: 100%; }

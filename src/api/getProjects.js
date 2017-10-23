@@ -1,6 +1,5 @@
 var contentful = require('contentful');
 
-console.log(typeof process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN)
 
 const client = contentful.createClient({
   space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
