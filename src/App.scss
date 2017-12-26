@@ -16,17 +16,18 @@
 
 $light-grey: #f8f7f7;
 
+.app-page {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 75px;
+}
+
 .app {
   display: flex;
   flex-direction: column;
   text-align: center;
   height: 100%;
-}
-
-.app-page {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 75px;
+  width: 100%;
   background: #fff;
 }
 
@@ -55,22 +56,6 @@ $light-grey: #f8f7f7;
     .app-content__projects-cards__car {
       margin: 0px 10px 10px 0px;
     }
-  }
-}
-
-.app-sidebar {
-  display: flex;
-  flex-direction: column;
-  background: #f0f0f0;
-  width: 60%;
-  height:100%;
-  .app-sidebar__card {
-    align-self: center;
-    width: 200px;
-    height: 100px;
-    margin: 30px;
-    background: black;
-    color: white;
   }
 }
 

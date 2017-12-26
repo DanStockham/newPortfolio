@@ -5,6 +5,7 @@ import Home from './pages/Home.js';
 import Projects from './pages/Projects.js';
 import AboutMe from './pages/AboutMe.js';
 import Contact from './pages/Contact.js';
+import Blog from './pages/Blog';
 import NotFound from './pages/NotFound.js';
 import './App.css';
 
@@ -15,6 +16,7 @@ class App extends Component {
         <Route path='/' component={Wrapper}>
           <IndexRoute component={Home} />
           <Route path='about-me' component={AboutMe} />
+          <Route path='blog' component={Blog} />
           <Route path='projects' component={Projects} />
           <Route path='contact' component={Contact} />
           <Route path='*' component={NotFound} />

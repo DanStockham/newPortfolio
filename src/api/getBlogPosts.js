@@ -8,17 +8,18 @@ const client = contentful.createClient({
 
 const call = (function() {
   return client.getEntries({
-    content_type: 'projects'
+    content_type: 'blogPost'
   }).then(function(entries) {
-    const projects = entries.items.map(function(elem) {
+    const posts = entries.items.map(function(elem) {
       return {
+        postId: elem.fields.postId,
         title: elem.fields.title,
-        description: elem.fields.description,
-        link: elem.fields.link,
-        imageUrl: elem.fields.image.fields.file.url
+        content: elem.fields.content.replace(/\u21b5+/g, '\n'),
+        publishDate: elem.fields.publishDate,
+        tags: elem.fields.tags
       };
     });
-    return projects;
+    return posts;
   })
   .catch(console.error);
 

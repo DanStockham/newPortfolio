@@ -47,10 +47,12 @@ export default class Wrapper extends Component {
 
     render() {
       const styles = this.checkScrollState();
+
       return (
         <div>
           <div className="app">
             <Nav passedStyles={styles}/>
+            <div></div>
             {this.props.children}
             <Footer />
           </div>
