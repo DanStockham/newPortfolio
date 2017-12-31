@@ -31,7 +31,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-right: 13%; }
-    .app-content .app-content__projects-cards .app-content__projects-cards__car {
+    .app-content .app-content__projects-cards .app-content__projects-cards__card {
       margin: 0px 10px 10px 0px; }
 
 .app-nav {
@@ -120,6 +120,11 @@
       height: 40px;
       font-weight: 900; }
 
+.app-content__blog-content {
+  padding-right: 30%; }
+  .app-content__blog-content .blog-content__post {
+    border-bottom: solid #a59e9b 2px; }
+
 .app-content__profile .profile__summary,
 .app-content__profile .profile__bio {
   padding-right: 30%; }
@@ -175,6 +180,9 @@
 .project-card:hover .project-card__inner-contents {
   transform: rotateY(-180deg);
   transition: 1s; }
+
+.error-message {
+  color: red; }
 
 @media (min-width: 1200px) {
   .app-content__projects {

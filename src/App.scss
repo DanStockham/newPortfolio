@@ -15,6 +15,7 @@
 }
 
 $light-grey: #f8f7f7;
+$dark-grey: #a59e9b;
 
 .app-page {
   display: flex;
@@ -53,7 +54,7 @@ $light-grey: #f8f7f7;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-right:13%;
-    .app-content__projects-cards__car {
+    .app-content__projects-cards__card {
       margin: 0px 10px 10px 0px;
     }
   }
@@ -166,6 +167,13 @@ $light-grey: #f8f7f7;
   }
 }
 
+.app-content__blog-content {
+  padding-right: 30%;
+  .blog-content__post {
+    border-bottom: solid $dark-grey 2px;
+  }
+}
+
 .app-content__profile {
   .profile__summary,
   .profile__bio {
@@ -221,7 +229,7 @@ $light-grey: #f8f7f7;
     height: 100%;
     width: 100%;
     position: absolute;
-     -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     backface-visibilty: hidden;
     transform: rotateY(-180deg);
     padding: 15px;
@@ -236,6 +244,10 @@ $light-grey: #f8f7f7;
   transition: 1s;
 }
 
+
+.error-message {
+  color: red;
+}
 
 @media (min-width: 1200px) {
   .app-content__projects {
