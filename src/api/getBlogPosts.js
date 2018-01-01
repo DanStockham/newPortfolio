@@ -12,17 +12,17 @@ const call = (function() {
   }).then(function(entries) {
     const posts = entries.items.map(function(elem) {
       return {
-        postId: elem.fields.postId,
+        postId: elem.sys.id,
         title: elem.fields.title,
-        content: elem.fields.content.replace(/\u21b5+/g, '\n'),
-        publishDate: elem.fields.publishDate,
-        tags: elem.fields.tags
+        content: elem.fields.content.replace(/\u21b5+/g, '\n').substring(0, 320).concat('...'),
+        slug: elem.fields.slug,
+        publishDate: elem.fields.publishDate
       };
     });
     return posts;
   })
   .catch((err) => {
-    console.log(err);
+    return err;
   });
 
 })();

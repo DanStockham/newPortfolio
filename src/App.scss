@@ -14,6 +14,8 @@
   margin-left: 12% - $off-set;
 }
 
+
+
 $light-grey: #f8f7f7;
 $dark-grey: #a59e9b;
 
@@ -168,8 +170,17 @@ $dark-grey: #a59e9b;
 }
 
 .app-content__blog-content {
-  padding-right: 30%;
+  padding-right: 50%;
+  line-height: 1.58;
+  p {
+    font-size: 18px;
+  }
+  a {
+   color: black; 
+   text-decoration: none;
+  }
   .blog-content__post {
+    padding-bottom: 150px;
     border-bottom: solid $dark-grey 2px;
   }
 }

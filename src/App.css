@@ -121,8 +121,15 @@
       font-weight: 900; }
 
 .app-content__blog-content {
-  padding-right: 30%; }
+  padding-right: 50%;
+  line-height: 1.58; }
+  .app-content__blog-content p {
+    font-size: 18px; }
+  .app-content__blog-content a {
+    color: black;
+    text-decoration: none; }
   .app-content__blog-content .blog-content__post {
+    padding-bottom: 150px;
     border-bottom: solid #a59e9b 2px; }
 
 .app-content__profile .profile__summary,
