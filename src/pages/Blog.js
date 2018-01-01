@@ -37,7 +37,8 @@ export class Blog extends Component { // eslint-disable-line react/prefer-statel
           return <div className="error-message">{ errors[prop] }</div>;
         }
       } 
-      return this.state.posts !== [] ? this.state.posts.map((post, idx) => {
+      return this.state.posts.length === 0 ? <div>Hmmm... no content</div> : 
+        this.state.posts.map((post, idx) => {
         return (
           <Link key={idx} to={{
               pathname: `blog/${post.slug}`,
@@ -50,7 +51,7 @@ export class Blog extends Component { // eslint-disable-line react/prefer-statel
           </Link>
         )
         
-        }) : <div>Hmmm... no content</div>;
+        });
       
      }
     return (
