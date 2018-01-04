@@ -25,6 +25,7 @@ export class Blog extends Component { // eslint-disable-line react/prefer-statel
   }
 
   render() {
+    console.log(this.state.posts)
     const isLoading = this.state.loading;
 
     const loading = <div>Loading...</div>
@@ -38,16 +39,17 @@ export class Blog extends Component { // eslint-disable-line react/prefer-statel
         }
       } 
       return this.state.posts.length === 0 ? <div>Hmmm... no content</div> : 
-        this.state.posts.map((post, idx) => {
+        this.state.posts.sort((a,b) => a.unixTime < b.unixTime).map((post, idx) => {
         return (
           <Link key={idx} to={{
               pathname: `blog/${post.slug}`,
               state: { post }
             }} >
-            <div>
-            <h2>{post.title}</h2>
-            <Markdown className="blog-content__post" source={post.content} />
-          </div>
+            <div className="blog-content__post-card">
+              <h6 className="">{post.publishDate}</h6>
+              <h2>{post.title}</h2>
+              <Markdown source={post.content} />
+            </div>
           </Link>
         )
         

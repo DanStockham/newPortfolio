@@ -180,9 +180,14 @@ $dark-grey: #a59e9b;
    text-decoration: none;
   }
   .blog-content__post {
-    padding-bottom: 150px;
-    border-bottom: solid $dark-grey 2px;
+    padding-bottom: 100px;
   }
+  .blog-content__post-card {
+    border-bottom: solid $dark-grey 1px;
+  }
+  // .blog-content__post-card:last-of-type {
+  //   border: none;
+  // }
 }
 
 .app-content__profile {
@@ -260,6 +265,10 @@ $dark-grey: #a59e9b;
   color: red;
 }
 
+.no-border {
+  border: none;
+}
+
 @media (min-width: 1200px) {
   .app-content__projects {
     width: 80%;
@@ -278,6 +287,9 @@ $dark-grey: #a59e9b;
 }
 
 @media (max-width: 600px) {
+  .app-content {
+    @include page-margin(1.4%);
+  }
   .app-nav {
     @include page-margin(1.5%);
 
@@ -286,12 +298,14 @@ $dark-grey: #a59e9b;
     }
     .app-nav__links {
       a {
+        justify-content: flex-start;
         font-size: 1em;
+
       }
     }
-    // .app-nav__links li:nth-child(1) {
-    //   display: none;
-    // }
+    .mobile-hide {
+      display: none;
+    }
   }
   .app-contact {
     .app-contact__form {
@@ -312,7 +326,12 @@ $dark-grey: #a59e9b;
   .app-content__projects-cards {
     width: 100%;
   }
+
+  .app-content__blog-content {
+    padding: 0 50px 100px 0;
+  }
+
   .form__btn {
-    margin-right: 8px;
+    // margin-right: 8px;
   }
 }

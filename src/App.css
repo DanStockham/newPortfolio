@@ -129,8 +129,9 @@
     color: black;
     text-decoration: none; }
   .app-content__blog-content .blog-content__post {
-    padding-bottom: 150px;
-    border-bottom: solid #a59e9b 2px; }
+    padding-bottom: 100px; }
+  .app-content__blog-content .blog-content__post-card {
+    border-bottom: solid #a59e9b 1px; }
 
 .app-content__profile .profile__summary,
 .app-content__profile .profile__bio {
@@ -191,6 +192,9 @@
 .error-message {
   color: red; }
 
+.no-border {
+  border: none; }
+
 @media (min-width: 1200px) {
   .app-content__projects {
     width: 80%;
@@ -203,12 +207,17 @@
     margin-right: 0; } }
 
 @media (max-width: 600px) {
+  .app-content {
+    margin-left: 10.6%; }
   .app-nav {
     margin-left: 10.5%; }
     .app-nav .app-nav__logo-name {
       display: none; }
     .app-nav .app-nav__links a {
+      justify-content: flex-start;
       font-size: 1em; }
+    .app-nav .mobile-hide {
+      display: none; }
   .app-contact .app-contact__form {
     margin-right: 0;
     width: 80vw; }
@@ -221,5 +230,5 @@
 @media (max-width: 500px) {
   .app-content__projects-cards {
     width: 100%; }
-  .form__btn {
-    margin-right: 8px; } }
+  .app-content__blog-content {
+    padding: 0 50px 100px 0; } }

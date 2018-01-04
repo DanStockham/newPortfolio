@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
   background: #f8f7f7; }
 
+h6 {
+  color: grey;
+  font-weight: bold; }
+
 p {
   color: #a59e9b; }
 

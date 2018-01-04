@@ -41,11 +41,11 @@ export class Blog extends Component { // eslint-disable-line react/prefer-statel
       } 
       return this.state.post !== {} ? (() => {
         const post = this.state.post;
-        console.log(post)
         return (
-          <div>
+          <div className="blog-content__post">
+          <h6>{post.publishDate}</h6>
             <h1>{post.title}</h1>
-            <Markdown className="blog-content__post" source={post.content} />
+            <Markdown source={post.content} />
           </div>
           
         )
